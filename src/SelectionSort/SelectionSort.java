@@ -38,7 +38,7 @@ public class SelectionSort {
 
 
     public static void main(String[] args) throws Exception {
-        Scanner readFile = readFile(mAFM, "data1.txt");
+        fileReader = readFile(mAFM, "data1.txt");
         // System.out.println(readFile);
         String getData = getData(readFile(mAFM, "data1.txt"));
         writeFile(mAFM, getData);
