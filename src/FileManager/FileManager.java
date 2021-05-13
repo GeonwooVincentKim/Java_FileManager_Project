@@ -15,5 +15,6 @@ public abstract class FileManager {
         this.fileReader = fileReader;
     }
 
-    public abstract Scanner readFile();
+    public abstract Scanner readFile(String fileName);
+    public abstract void writeFile(String fileName, String result);
 }
