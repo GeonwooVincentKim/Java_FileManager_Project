@@ -8,14 +8,6 @@ import FileManager.AssistantFileManager;
 
 
 public class SelectionSort {
-    static File file = new File("data1.txt");
-    static String fileName = "result1.txt";
-    
-    static Scanner fileReader = null;
-    static FileWriter fileWriter = null;
-
-    static AssistantFileManager mAFM = new AssistantFileManager(file, fileWriter, fileReader);
-
 
     public static Scanner readFile(AssistantFileManager asAFM, String fileName){
         return asAFM.readFile(fileName);
@@ -38,8 +30,13 @@ public class SelectionSort {
 
 
     public static void main(String[] args) throws Exception {
+        File file = new File("data1.txt");
+
+        Scanner fileReader = null;
+        FileWriter fileWriter = null;
+        AssistantFileManager mAFM = new AssistantFileManager(file, fileWriter, fileReader);
+
         fileReader = readFile(mAFM, "data1.txt");
-        // System.out.println(readFile);
         String getData = getData(readFile(mAFM, "data1.txt"));
         writeFile(mAFM, getData);
     }
