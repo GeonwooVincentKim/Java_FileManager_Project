@@ -5,6 +5,14 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 
+/*
+    Child-Class
+    1. Overloading -> Overload same function name in same class.
+    2. Overriding -> Overload same function name in different class.
+                  -> It's good for when you trying to make the file-logic 
+                     that some-class 'B' derives from some-class 'A'.
+*/
+
 public class AssistantFileManager extends FileManager {
     public AssistantFileManager(File file, FileWriter fileWriter, Scanner fileReader){
         super(file, fileWriter, fileReader);
