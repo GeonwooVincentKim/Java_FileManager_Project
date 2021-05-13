@@ -22,8 +22,11 @@ public class SelectionSort {
         String getLine = "";
         String splitLines[] = null;
         int []convertSplitLines = null;
+
+        String result = "";
+        int i = 0, j = 0;
         
-        for(int i = 1; i <= readLine; i++){
+        for(i = 1; i <= readLine; i++){
             if(!fileReader.hasNextLine()){
                 System.out.println("더 이상 입력할 수 있는 줄이 존재하지 않습니다.");
             }
@@ -34,14 +37,12 @@ public class SelectionSort {
             splitLines = getLine.split(" ");
             convertSplitLines = mCon.convertToInt(splitLines);
 
-            for(int j = 0; j < convertSplitLines.length; j++){
+            for(j = 0; j < convertSplitLines.length; j++){
                 System.out.print(convertSplitLines[j] + " ");
             }
             System.out.println();
         }
 
-        String result = "";
-        int i = 0, j = 0;
 
         return result;
     }
