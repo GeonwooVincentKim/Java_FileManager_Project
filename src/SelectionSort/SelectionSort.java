@@ -13,6 +13,10 @@ public class SelectionSort {
     public static Scanner readFile(AssistantFileManager asAFM, String fileName){
         return asAFM.readFile(fileName);
     }
+
+    public static void writeFile(AssistantFileManager asAFM, String result){
+        asAFM.writeFile("result1.txt", result);
+    }
     
     public static String getData(Scanner fileReader){
         
@@ -46,11 +50,6 @@ public class SelectionSort {
 
         return result;
     }
-
-    public static void writeFile(AssistantFileManager asAFM, String result){
-        asAFM.writeFile("result1.txt", result);
-    }
-
 
     public static void main(String[] args) throws Exception {
         File file = new File("data1.txt");
