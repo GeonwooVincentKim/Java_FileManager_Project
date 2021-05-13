@@ -1,14 +1,15 @@
 package TypeConverter;
 
 public class TypeConverter {
-    public String splitLines[];
+    // public String splitLines[];
     // public int []getSplitLines;
-    public int []convertSplitLines[];
+    // public int []convertSplitLines[];
 
-    TypeConverter(String splitLines[], int []convertSplitLines[]){
-        this.splitLines = splitLines;
-        this.convertSplitLines = convertSplitLines;
-    }
+    // public TypeConverter(String splitLines[]){
+        // this.splitLines = splitLines;
+        // this.convertSplitLines = convertSplitLines;
+    // }
+    public TypeConverter(){}
 
     public int[] convertToInt(String splitLines[]){
         int []convertSplitLines = new int[splitLines.length];

@@ -5,29 +5,34 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 import FileManager.AssistantFileManager;
+import TypeConverter.TypeConverter;
 
 
 public class SelectionSort {
-
+    
     public static Scanner readFile(AssistantFileManager asAFM, String fileName){
         return asAFM.readFile(fileName);
     }
-
+    
     public static String getData(Scanner fileReader){
+        
         int readLine = Integer.parseInt(fileReader.nextLine());
         System.out.println(readLine);
-
+        
         String getLine = "";
         String splitLines[] = null;
         int []convertSplitLines = null;
-
+        
         for(int i = 1; i <= readLine; i++){
             if(!fileReader.hasNextLine()){
                 System.out.println("더 이상 입력할 수 있는 줄이 존재하지 않습니다.");
             }
+            
+            TypeConverter mCon = new TypeConverter();
 
             getLine = fileReader.nextLine();
             splitLines = getLine.split(" ");
+            convertSplitLines = mCon.convertToInt(splitLines);
         }
 
         String result = "";
