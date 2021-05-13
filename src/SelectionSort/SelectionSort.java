@@ -61,6 +61,10 @@ public class SelectionSort {
         /* 
             If there is no Abstract in AssistantFileManager, you can convert AssistantFileManager into the FileManager.
             AssistantFileManager mAFM = new FileManager(file, fileWriter, fileReader);
+            
+            Or, you can just convert FileManager into the AssistantFileManager using `Type-Cast-Operator`
+            FileManager mFM = new FileManager(file, fileWriter, fileReader);
+            AssistantFileManager mAFM = (AssistantFileManager) mFM;
         */
         AssistantFileManager mAFM = new AssistantFileManager(file, fileWriter, fileReader);
 
