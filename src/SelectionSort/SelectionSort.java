@@ -23,7 +23,6 @@ public class SelectionSort {
         return result;
     }
 
-
     public static void writeFile(AssistantFileManager asAFM, String result){
         asAFM.writeFile("result1.txt", result);
     }
@@ -34,7 +33,13 @@ public class SelectionSort {
 
         Scanner fileReader = null;
         FileWriter fileWriter = null;
+        
+        /* 
+            If there is no Abstract in AssistantFileManager, you can convert AssistantFileManager into the FileManager.
+            AssistantFileManager mAFM = new FileManager(file, fileWriter, fileReader);
+        */
         AssistantFileManager mAFM = new AssistantFileManager(file, fileWriter, fileReader);
+
 
         fileReader = readFile(mAFM, "data1.txt");
         String getData = getData(readFile(mAFM, "data1.txt"));
