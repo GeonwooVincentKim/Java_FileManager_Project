@@ -33,6 +33,11 @@ public class SelectionSort {
             getLine = fileReader.nextLine();
             splitLines = getLine.split(" ");
             convertSplitLines = mCon.convertToInt(splitLines);
+
+            for(int j = 0; j < convertSplitLines.length; j++){
+                System.out.print(convertSplitLines[j] + " ");
+            }
+            System.out.println();
         }
 
         String result = "";
