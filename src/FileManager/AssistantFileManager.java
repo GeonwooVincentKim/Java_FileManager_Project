@@ -22,7 +22,7 @@ public class AssistantFileManager extends FileManager {
     public Scanner readFile(String fileName) {
         // TODO Auto-generated method stub
         file = new File(fileName);
-        
+
         try {
             fileReader = new Scanner(file);
         } catch (Exception e){
@@ -30,11 +30,6 @@ public class AssistantFileManager extends FileManager {
         }
         
         return fileReader;
-    }
-
-    public String getData(Scanner fileReader){
-        String result = "";
-        return result;
     }
 
     @Override
