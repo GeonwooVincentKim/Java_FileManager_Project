@@ -17,6 +17,19 @@ public class SelectionSort {
         int readLine = Integer.parseInt(fileReader.nextLine());
         System.out.println(readLine);
 
+        String getLine = "";
+        String splitLines[] = null;
+        int []convertSplitLines = null;
+
+        for(int i = 1; i <= readLine; i++){
+            if(!fileReader.hasNextLine()){
+                System.out.println("더 이상 입력할 수 있는 줄이 존재하지 않습니다.");
+            }
+
+            getLine = fileReader.nextLine();
+            splitLines = getLine.split(" ");
+        }
+
         String result = "";
         int i = 0, j = 0;
 
