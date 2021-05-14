@@ -29,7 +29,8 @@ public class SelectionSort {
 
         String result = "";
         int i = 0, j = 0;
-        
+        int sum = 0;
+
         for(i = 1; i <= readLine; i++){
             if(!fileReader.hasNextLine()){
                 System.out.println("더 이상 입력할 수 있는 줄이 존재하지 않습니다.");
@@ -42,12 +43,16 @@ public class SelectionSort {
             convertSplitLines = mCon.convertToInt(splitLines);
 
             for(j = 0; j < convertSplitLines.length; j++){
-                System.out.print(convertSplitLines[j] + " ");
+                if(j % readLine != 0){
+                    sum += j;
+                }
+                // System.out.print(convertSplitLines[j] + " ");
             }
-            System.out.println();
+            result += "#" + i + " : " + sum + "\n";
         }
 
-
+        System.out.println(result);
+        
         return result;
     }
 
